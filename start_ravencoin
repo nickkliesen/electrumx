@@ -3,9 +3,9 @@
 export RPC_PORT=8000
 export CACHE_MB=400
 
-export COIN=Ravencoin
-export DB_DIRECTORY=~/.electrumx/rvn
-export DAEMON_URL=http://rpcuser:rpcpass@127.0.0.1:8766/
+export COIN=Pigeoncoin
+export DB_DIRECTORY=~/.electrumx/pgn
+export DAEMON_URL=http://rpcuser:rpcpass@127.0.0.1:8756/
 
 export NET=mainnet
 export DB_ENGINE=leveldb
