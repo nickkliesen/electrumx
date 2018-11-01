@@ -2133,3 +2133,24 @@ class tBitg(Bitg):
     GENESIS_HASH = (
         '000008467c3a9c587533dea06ad9380cded3ed32f9742a6c0c1aebc21bf2bc9b')
     RPC_PORT = 19332
+
+    class Pigeoncoin(Coin):
+    NAME = "Pigeoncoin"
+    SHORTNAME = "PGN"
+    NET = "mainnet"
+    XPUB_VERBYTES = bytes.fromhex("0877A12A")
+    XPRV_VERBYTES = bytes.fromhex("0877A12A")
+    P2PKH_VERBYTE = bytes.fromhex("37")
+    P2SH_VERBYTES = [bytes.fromhex("7A")]
+    WIF_BYTE = bytes.fromhex("80")
+    GENESIS_HASH = ('000000f049bef9fec0179131874c54c7'
+                    '6c0ff59f695db30a4f0da52072c99492')
+    DESERIALIZER = lib_tx.DeserializerSegWit
+    RPC_PORT =8756
+    REORG_LIMIT = 2000
+    PEERS = []
+    @classmethod
+    def header_hash(cls, header):
+        '''Given a header return the hash.'''
+        import x16s_hash
+        return x16s_hash.getPoWHash(header)
