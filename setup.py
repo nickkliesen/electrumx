@@ -12,16 +12,18 @@ setuptools.setup(
     # "blake256" package is required to sync Decred network.
     # "xevan_hash" package is required to sync Xuez network.
     # "groestlcoin_hash" package is required to sync Groestlcoin network.
+    # "x16r_hash" package is required to sync Ravencoincoin network.
+    # "x16s_hash" package is required to sync Pigeoncoin network.
     install_requires=['aiorpcX>=0.7.3,<0.8', 'attrs',
                       'plyvel', 'pylru', 'aiohttp >= 2'],
     packages=setuptools.find_packages(include=('electrumx*',)),
-    description='ElectrumX Server for Ravencoin',
-    author='Traysi Hylian',
-    author_email='link@traysi.org',
+    description='ElectrumX Server',
+    author='russ',
+    author_email='email',
     license='MIT Licence',
-    url='https://github.com/traysi/electrumx',
+    url='https://github.com/russkidooski/electrumx/',
     long_description='Server implementation for the Electrum protocol',
-    download_url=('https://github.com/traysi/electrumX/archive/'
+    download_url=('https://github.com/russkidooski/electrumx/archive/'
                   f'{version}.tar.gz'),
     classifiers=[
         'Development Status :: 5 - Production/Stable',
