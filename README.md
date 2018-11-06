@@ -33,14 +33,14 @@ Install ravend and run it with -txindex just like you would with an explorer.
 	. ~/.bashrc
 	python --version # Should show 3.7
 	pip install plyvel pylru aiorpcx aiohttp
-	pip install git+https://github.com/traysi/x16r_hash
+	pip install git+https://github.com/russkidooski/x16s_hash
 
 # Install ElectrumX
 
-	git clone https://github.com/traysi/electrumx.git
+	git clone https://github.com/russkidooski/electrumx.git
 	cd electrumx/
 	python setup.py install
-	mkdir -p ~/.electrumx/rvn
+	mkdir -p ~/.electrumx/pgn
 	openssl genrsa -des3 -passout pass:x -out ~/server.pass.key 2048
 	openssl rsa -passin pass:x -in ~/server.pass.key -out ~/.electrumx/server.key
 	rm ~/server.pass.key
@@ -50,8 +50,8 @@ Install ravend and run it with -txindex just like you would with an explorer.
 
 # Edit ~/electrumx/start_ravencoin to update the variables to reflect your local environment.
 
-	nano ~/electrumx/start_ravencoin
-	~/electrumx/start_ravencoin &
+	nano ~/electrumx/start_pigeoncoin
+	~/electrumx/start_pigeoncoin &
 	tail -f ~/.electrumx/electrumx.log # to watch the logs.
 
 It'll take a while to connect and build its local database, so be patient. After the syncing is finished, you can connect and test it with:
